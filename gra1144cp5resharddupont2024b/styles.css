@@ -1,0 +1,60 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: rgba(6,0,62,1.00);
+}
+wrapper {
+    margin: auto;
+    display: block;
+    width: 1356px;
+}
+nav {
+    background-color: rgba(134,134,134,1.00);
+    height: 0px;
+}
+main {
+    height: 650px;
+    padding-top: 70px;
+}
+ul a li {
+    display: inline-block;
+    color: rgba(255,255,255,1.00);
+    padding-top: 10px;
+    padding-right: 56px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    font-family: sant-serif;
+    margin-right: -5px;
+    margin-left: 0px;
+}
+li {
+}
+ul a li:hover {
+    background-color: rgba(255,0,0,1.00);
+}
+header {
+    padding-top: 0px;
+    font-family: "Linkin Park";
+}
+ul a li {
+}
+h1 {
+    padding-left: 0px;
+}
+wrapper header h1 {
+    padding-left: 581px;
+    color: hsla(0,0%,100%,1.00);
+}
+p {
+    color: hsla(0,0%,100%,1.00);
+    margin-top: 89px;
+}
+img {
+    padding-top: 0px;
+    padding-left: 0px;
+    width: 296pt;
+    height: 313px;
+    margin-left: 62px;
+}
