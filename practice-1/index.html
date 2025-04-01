@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Drag and Drop</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet"> <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<style type="text/css">
+body {
+    margin: 0;
+    background-color: lightgray; font-family: "Kablammo", system-ui;
+}
+wrapper {
+    width: 250px;
+    margin-bottom: auto;
+    padding: 10px;
+    display: block;
+    margin-right: 74px;
+    margin-top: 109px;
+    margin-left: 809px;
+    position: relative;
+}
+div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightblue;
+    border: thin solid blue border;
+    display: inline-block;
+    border-radius: 10px;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 27px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#chocolate {
+    height: 83px;
+    width: 94px;
+    margin-top: -14px;
+}
+#vanilla {
+    width: 94px;
+    height: 83px;
+    margin-top: -19px;
+}
+#strawberry {
+    width: 94px;
+    height: 76px;
+    margin-top: -14px;
+}
+#cone {
+    margin-top: 74px;
+    margin-left: 8px;
+    width: 208px;
+    height: 304px;
+}
+#divA {
+    margin-left: 67px;
+    width: 634px;
+    height: 624px;
+    margin-top: -252px;
+}
+#mint {
+    width: 94px;
+    height: 76px;
+    margin-top: -14px;
+}
+#drop5 {
+    margin-left: -787px;
+    margin-top: -106px;
+    width: 214px;
+    height: 224px;
+    padding-top: 25px;
+    margin-bottom: 1px;
+    background-color: transparent;
+}
+#drop5 img {
+    width: 100%;
+    height: auto;
+}
+h1 {
+    text-align: center;
+    font-size: 45px;
+    color: rgba(16,102,105,1.00);
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Re&rsquo;shard&rsquo;s Ice Cream Shop!</h1>
+</header>
+<wrapper> 
+  <div id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Chocolate.png" alt="" width="203" height="142" id="chocolate" draggable="true" ondragstart="drag(event)"></div>
+  <div id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Vanilla.png" alt="" width="203" height="142" id="vanilla" draggable="true" ondragstart="drag(event)"></div>
+  <div id="drop3" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Mint.png" alt="" width="203" height="142" id="mint" draggable="true" ondragstart="drag(event)"></div>
+  <div id="drop4" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Strawberry.png" alt="" width="203" height="186" id="strawberry" draggable="true" ondragstart="drag(event)">  </div>
+  <div id="drop5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</wrapper>
+<div id="divA"><img src="Cone.png" alt="" width="177" height="246" id="cone"></div>
+</body>
+</html>
